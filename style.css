@@ -1,0 +1,431 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&display=swap');
+
+/* Aplicações gerais*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* aplicando altura e fonte pelo body para uso geral */
+body{
+    height: 100vh;
+    font-family: "Martel Sans", sans-serif;
+}
+
+
+/* Div conteudo principal */
+.container{
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    overflow: hidden;
+}
+
+
+/* efeitos aurora da div class aurora */
+.aurora{
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(120px);
+    animation: gradient 4s infinite;
+}
+
+@keyframes gradient{
+    70%{
+        transform: scale(1.2) translate(100px);
+    }
+}
+
+.aurora:nth-child(1){background-color: #ff057c; height: 90%; width: 80%; left: -20%; top: -10%; animation-delay: .3s;}
+.aurora:nth-child(2){background-color: #1ba89e; height: 80%; width: 75%; right: -15%; top: -10%; animation-delay: 1s;}
+.aurora:nth-child(3){background-color: #1619b9; height: 65%; width: 65%; right: -10%; bottom: -10%; animation-delay: .8;}
+.aurora:nth-child(4){background-color: #1ba8e9; height: 60%; width: 70%; left: -10%; bottom: -10%; animation-delay: 2s;}
+
+
+/* Titulo da Página */
+h1{
+    font-size: 2.7em;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.493);
+    font-weight: bolder;
+    height: 80px;
+    line-height: 80px;
+    color: black;
+    z-index: 1;
+}
+
+
+/* estilos da caixa principal onde contem todas as caixas de cálculos */
+.box{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 2fr;
+    height: 80%;
+    width: 1250px;
+    margin: 0 auto;
+    transition: all 1s ease-in-out;
+}
+
+
+/* estilos aplicados nas 5 caixas de cálculos */
+.area{
+    position: relative;
+    width: 400px;
+    height: 300px;
+    margin: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.425);
+    background-color: rgba(0, 0, 0, 0.100);
+    backdrop-filter: blur(100px);
+    transition: all 1s ease-in-out;
+}
+
+/* estilo da ultima caixa de calculo do resto da divisão */
+.area-resto{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    flex-direction: column;
+    grid-column: 3;
+    grid-row: 1 / span 2;
+    height:450px;
+} 
+
+.area-resto h2{margin: 10px 0px;}
+
+.area-resto .valores{margin: 20px 0px;}
+
+.area-resto .resultado{margin-top: 20px;} 
+
+
+
+/* titulo de todas as 5 caixas de calculos estilizadas */
+h2{
+    font-size: 2em;
+    text-align: center;
+    font-weight: 900;
+    color: white;
+    text-shadow: 0px 0px 10px white;
+    margin-top: 10px;
+}
+
+
+/* estilos os inputs number */
+.valores{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type="number"]{
+    display: inline-block;  
+    width: 170px;
+    height: 50px;
+    text-align: center;
+    font-size: 1.4em;
+    border-radius: 10px;
+    color: yellow;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.171);
+    box-shadow: 0px 0px 20px -10px rgba(255, 255, 255, 0.568);
+}
+
+/* estilo simples dos simblos entra os input */
+span{
+    font-size: 1.5em;
+    margin: 0px 10px;
+    color: white;
+    text-shadow: 0px 0px 20px white
+}
+
+/* estilo aplicado sobe os placeholders 'Textos internos' nas caixas de input */
+input::placeholder{
+    color: aqua;
+    font-size: .7em;
+    margin-right: -10px;
+}
+
+/* Estilo aplicado em todos os 5 botões */
+input[type="button"]{
+    display: block;
+    margin: 20px auto;
+    padding: 12px 20px;
+    font-size: 1.3em;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    color: aqua;
+    font-weight: 100;
+    background-color: darkred;
+    transition: all .3s ease-in-out;
+}
+/* Estilo hover dos 5 botões ao passa o mouse sobre eles */
+input[type="button"]:hover{
+    background-color: red;
+    box-shadow: 0px 0px 20px 5px red;
+    border: transparent;
+    color: white;
+}
+
+
+/* Estilo aplicado sobre a area de resultado das 5 caixas de calculos */
+.resultado{
+    background-color: rgba(255, 255, 255, 0.11);
+    height: 70px;
+    width: 370px;
+    margin: 0 auto;
+    color: white;
+    text-align: center;
+    line-height: 70px;
+    font-size: 1em;
+    font-weight: 300;
+    border-radius: 10px;
+    user-select: text;
+}
+
+
+
+/* Media Quieres e responsivel */
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+
+
+@media only screen and (min-width: 350px) and (max-width:599.8px){
+
+    h1{
+        font-size: 1.6em;
+        transition: all 1s ease-in-out;
+    }
+
+    body{
+        background-color: purple;
+        max-width: 599.8px;
+        min-width: 350px;
+    }
+
+    .box{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .area{
+        width: 65%;
+        min-width: 310px;
+        transition: all 1s ease-in-out;
+        grid-column: 1;
+    }
+
+    .area-resto{
+        grid-row: 5;
+    }
+
+    h2{
+        font-size: 1.5em;
+    }
+
+    input[type="number"]{
+        width: 35%;
+    }
+
+    
+
+    input[type="button"]{
+        padding: 10px;
+        font-size: 1em;
+    }
+
+    input::placeholder{
+        font-size: .45em;
+        margin-left: 10px;
+    }
+
+    .resultado{
+        width: 90%;
+        font-size: .7em;
+    }
+}
+
+
+@media only screen and (min-width: 600px) and (max-width:829.8px) {
+
+    h1{
+        font-size: 2em;
+        transition: all 1s ease-in-out;
+    }
+
+    body{
+        background-color: green;
+    }
+
+    
+    
+
+    .box{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-row: auto auto;
+        justify-items: center;
+        width: 100%;
+    }
+
+    .area{
+        width: 85%;
+        min-width: 260px;
+        transition: all 1s ease-in-out;
+        grid-column: 2 span 2;
+    }
+
+    .area-resto{
+        grid-column: span 2;
+        grid-row: 3;
+        width: 400px;
+    }
+
+    h2{
+        font-size: 1.5em;
+    }
+
+    input[type="number"]{
+        width: 35%;
+    }
+
+    
+
+    input[type="button"]{
+        padding: 10px;
+        font-size: 1em;
+    }
+
+    input::placeholder{
+        font-size: .45em;
+        margin-left: 10px;
+    }
+
+    .resultado{
+        width: 90%;
+        font-size: .7em;
+    }
+}
+
+/* Medium devices (landscape tablets, 800px and up) */
+@media only screen and (min-width: 830px) and (max-width: 991.8px) {
+    body{
+        background-color: blue;
+    }
+
+
+    .box{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-row: auto auto;
+        justify-items: center;
+        width: 100%;
+    }
+
+    .area{
+        width: 350px;
+        transition: all 1s ease-in-out;
+        grid-column: 2 span 2;
+    }
+
+    .area-resto{
+        grid-column: span 2;
+        grid-row: 3;
+    }
+
+    h2{
+        font-size: 1.8em;
+    }
+
+    input[type="number"]{
+        width: 42%;
+    }
+
+    input[type="button"]{
+        padding: 10px;
+    }
+
+    .resultado{
+        width: 90%;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) and (max-width:1199.8px) {
+    body{
+        background-color: yellow;
+    }
+
+    .box{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto auto;
+        justify-items: center;
+        max-width: 1000px;
+    }
+
+    h2{
+        margin-top: 40px;
+    }
+
+    .area{
+        width: 420px;
+        height: 350px;
+        transition: all 1s ease-in-out;
+    }
+
+    .area-resto{
+        grid-column: span 2;
+        grid-row: 3;
+        height: 450px;
+    }
+}
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) and (max-width:1440px){
+    body{
+        background-color: red;
+        
+    }
+
+    .container{
+        min-height: 100vh;
+        
+    }
+
+    .box{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto auto;
+        justify-items: center;
+        width: 1200px;
+    }
+
+    h2{
+        margin-top: 50px;
+    }
+
+    .area{
+        height: 400px;
+         width: 500px;
+         transition: all 1s ease-in-out;
+    }
+
+    .area-resto{
+        height: 450px;
+        grid-column: span 2;
+        grid-row: 3;
+    }
+
+    
+}

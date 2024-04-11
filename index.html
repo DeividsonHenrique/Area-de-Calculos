@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area Matemática</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="Script.js" defer></script>
+</head>
+<body>
+    <div class="container"> <!--Div principal onde ficara todos os itens-->
+
+        <div class="aurora"></div><div class="aurora"></div><div class="aurora"></div><div class="aurora"></div> <!--Div para os efeitos backgrond aurora animado-->
+
+        <h1>Área de Cálculos</h1> <!--Titulo da página-->
+
+        <div class="box">   <!--Div onde todas as areas de calculos se localizam-->
+
+            <div class="area area-soma"> <!-- Início da div da area de calculos matemáticos para somar-->
+                <h2>Soma</h2><!--titulo area de calculos matemáticos-->
+
+                <div class="valores"><!-- Div de botões para inserir os valores da area de calculos matemáticos-->
+                    <input id="sm1" type="number" placeholder="Digite um Valor"> <span>+</span>
+                    <input id="sm2" type="number" placeholder="Digite outro Valor">
+                </div><!-- Fim da divi Botões para inserir os valores da area de calculos matemáticos-->
+
+                <input onclick="somar()" type="button" value="Somar os Valores"><!-- Botões para calcular os valores matemáticos-->
+                <div class="resultado" id="resSoma"></div><!-- Div do resultado -->
+            </div><!-- Fim da div da area de calculos matemáticos para somar-->
+
+
+
+            <div class="area area-multiplicacao">   <!-- Início da div da area de calculos matemáticos para Múltiplicação-->
+                <h2>Múltiplicação</h2> <!--titulo area de calculos matemáticos-->
+
+                <div class="valores"> <!-- Div de botões para inserir os valores da area de calculos matemáticos-->
+                    <input id="mp1" type="number" placeholder="Digite um Valor"> <span>x</span>
+                    <input id="mp2" type="number" placeholder="Digite outro Valor">
+                </div> <!-- Fim da divi Botões para inserir os valores da area de calculos matemáticos-->
+
+                <input onclick="multiplicar()" type="button" value="Múltiplicar os Valores"> <!-- Botões para calcular os valores matemáticos-->
+                <div class="resultado" id="resMp"></div> <!-- Div do resultado -->
+            </div>  <!-- Fim da div da area de calculos matemáticos para Múltiplicação-->
+
+
+
+            <div class="area area-divisao">   <!-- Início da div da area de calculos matemáticos para divisao-->
+                <h2>Divisão</h2> <!--titulo area de calculos matemáticos-->
+
+                <div class="valores"> <!-- Div de botões para inserir os valores da area de calculos divisao-->
+                    <input id="div1" type="number" placeholder="Digite um Valor"> <span>÷</span>
+                    <input id="div2" type="number" placeholder="Digite outro Valor">
+                </div> <!-- Fim da divi Botões para inserir os valores da area de calculos matemáticos-->
+                
+                <input onclick="dividir()" type="button" value="Dividir os Valores"> <!-- Botões para calcular os valores matemáticos-->
+                <div class="resultado" id="resDiv"></div> <!-- Div do resultado -->
+            </div>  <!-- Fim da div da area de calculos matemáticos para divisao-->
+
+            
+
+            <div class="area area-subtracao">   <!-- Início da div da area de calculos matemáticos para subtracao-->
+                <h2>Subtração</h2> <!--titulo area de calculos matemáticos-->
+
+                <div class="valores"> <!-- Div de botões para inserir os valores da area de calculos matemáticos-->
+                    <input id="sub1" type="number" placeholder="Digite um Valor"> <span>--</span>
+                    <input id="sub2" type="number" placeholder="Digite outro Valor">
+                </div> <!-- Fim da divi Botões para inserir os valores da area de calculos matemáticos-->
+
+                <input onclick="subtrair()" type="button" value="Subtrair os Valores"> <!-- Botões para calcular os valores matemáticos-->
+                <div class="resultado" id="resSub"></div> <!-- Div do resultado -->
+            </div>  <!-- Fim da div da area de calculos matemáticos para subtracao-->
+
+            <div class="area area-resto">   <!-- Início da div da area de calculos matemáticos para Módulo-->
+                <h2>Resto da Divisão</h2> <!--titulo area de calculos matemáticos-->
+
+                <div class="valores"> <!-- Div de botões para inserir os valores da area de calculos matemáticos-->
+                    <input id="res1" type="number" placeholder="Digite um Valor"> <span>%</span>
+                    <input id="res2" type="number" placeholder="Digite outro Valor">
+                </div> <!-- Fim da divi Botões para inserir os valores da area de calculos matemáticos-->
+
+                <input onclick="resto()" type="button" value="Modular dos Valores"> <!-- Botões para calcular os valores matemáticos-->
+                <div class="resultado" id="res"></div> <!-- Div do resultado -->
+            </div>  <!-- Fim da div da area de calculos matemáticos para Módulo-->
+
+        </div><!-- Fim da Div Box -->
+
+    </div><!-- fim da Div container-->
+</body>
+</html>
